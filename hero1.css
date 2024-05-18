@@ -1,0 +1,101 @@
+/* Hero Section Styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 50vh; /* Use half the viewport height */
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent overflow */
+    position: relative;
+}
+
+.date-time {
+    margin-top: 20px;
+    font-size: 1em;
+    color: rgb(0, 0, 0);
+    margin-bottom: 20px;
+}
+
+@keyframes breathingGlow {
+    0% {
+        text-shadow: 0 0 3px rgba(0, 0, 0, 0.6), 0 0 5px rgba(0, 0, 0, 0.089), 0 0 8px rgba(0, 0, 0, 0.267);
+    }
+    50% {
+        text-shadow: 0 0 6px rgba(0, 0, 0, 0.6), 0 0 10px rgba(0, 0, 0, 0.116), 0 0 15px rgba(0, 0, 0, 0.226);
+    }
+    100% {
+        text-shadow: 0 0 3px rgba(0, 0, 0, 0.6), 0 0 5px rgba(0, 0, 0, 0.055), 0 0 8px rgba(0, 0, 0, 0.274);
+    }
+}
+
+.button {
+    background: none;
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 1.2em;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    font-family: 'UnifrakturCook', cursive; /* Apply the same font as the logo */
+    animation: breathingGlow 4s infinite; /* Apply the breathing glow animation */
+}
+
+.button:hover {
+    transform: scale(1.05);
+}
+
+.button:active {
+    transform: scale(0.95);
+}
+
+.social-icons {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column; /* Stack the icons vertically */
+    align-items: center;
+}
+
+.social-icons a {
+    margin: -5px 0; /* Reduced the margin */
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.social-icons img {
+    width: 60px; /* Adjust the size as needed */
+    height: 60px; /* Adjust the size as needed */
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .date-time {
+        font-size: 0.9em;
+    }
+    .button {
+        font-size: 1em;
+        padding: 8px 16px;
+    }
+    .social-icons img {
+        width: 50px; /* Adjust the size for mobile */
+        height: 50px; /* Adjust the size for mobile */
+    }
+}
