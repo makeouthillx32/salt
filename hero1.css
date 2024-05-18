@@ -1,22 +1,10 @@
-/* Hero Section Styling */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-}
-
-.hero-section {
+.hero-section#hero1 .content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    height: 50vh; /* Use half the viewport height */
-    margin: 0;
-    padding: 0;
-    overflow: hidden; /* Prevent overflow */
-    position: relative;
+    width: 100%;
+    padding: 0px; /* Add padding to avoid content being cut off */
 }
 
 .date-time {
@@ -28,13 +16,13 @@ body {
 
 @keyframes breathingGlow {
     0% {
-        text-shadow: 0 0 3px rgba(0, 0, 0, 0.6), 0 0 5px rgba(0, 0, 0, 0.089), 0 0 8px rgba(0, 0, 0, 0.267);
+        text-shadow: 0 0 3px rgba(0, 0, 0, 0.6), 0 0 5px rgba(255, 255, 255, 0.6), 0 0 8px rgba(0, 0, 0, 0.13);
     }
     50% {
-        text-shadow: 0 0 6px rgba(0, 0, 0, 0.6), 0 0 10px rgba(0, 0, 0, 0.116), 0 0 15px rgba(0, 0, 0, 0.226);
+        text-shadow: 0 0 6px rgba(0, 0, 0, 0.6), 0 0 10px rgba(255, 255, 255, 0.6), 0 0 15px rgba(0, 0, 0, 0.6);
     }
     100% {
-        text-shadow: 0 0 3px rgba(0, 0, 0, 0.6), 0 0 5px rgba(0, 0, 0, 0.055), 0 0 8px rgba(0, 0, 0, 0.274);
+        text-shadow: 0 0 3px rgba(0, 0, 0, 0.6), 0 0 5px rgba(255, 255, 255, 0.6), 0 0 8px rgba(0, 0, 0, 0.6);
     }
 }
 
@@ -71,7 +59,7 @@ body {
 
 .social-icons a {
     margin: -5px 0; /* Reduced the margin */
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     text-decoration: none;
     transition: transform 0.3s ease;
 }

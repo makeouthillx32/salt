@@ -1,51 +1,40 @@
-.hero2-section {
-    background-color: #4a3191;
-    height: 50vh; /* Use half the viewport height */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+.container {
     display: flex;
+    flex-direction: column;
+    height: 120vh; /* Ensure the container takes up the full height of the viewport */
+}
+
+.hero-section {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    text-align: center;
     margin: 0;
     padding: 0;
-    position: relative; /* Ensure relative positioning */
-    padding-top: 50px; /* Move hero2 down */
-    transition: transform 0.3s ease, margin-top 0.3s ease; /* Smooth scaling and margin-top transition */
+    overflow: hidden; /* Prevent overflow */
+    position: relative;
+    flex: 1; /* Allow hero sections to take up equal space */
 }
 
-/* Adjust scaling for smaller screens */
-@media (max-width: 1200px) {
-    .hero2-section {
-        transform: scale(0.9); /* Scale down to 90% */
-        padding-top: 70px; /* Move down more */
-    }
+.hero-section#hero2 {
+    background-color: transparent; /* Make hero2 background transparent */
+    z-index: 2; /* Ensure hero2 is above hero1 */
+    flex: 1; /* Allow hero2 to take up necessary space */
 }
 
-@media (max-width: 992px) {
-    .hero2-section {
-        transform: scale(0.8); /* Scale down to 80% */
-        padding-top: 100px; /* Move down more */
-    }
-}
-
-@media (max-width: 768px) {
-    .hero2-section {
-        transform: scale(0.7); /* Scale down to 70% */
-        padding-top: 150px; /* Move down more */
-    }
-}
-
-@media (max-width: 576px) {
-    .hero2-section {
-        transform: scale(0.6); /* Scale down to 60% */
-        padding-top: 200px; /* Move down more */
-    }
-}
-
-@media (max-width: 400px) {
-    .hero2-section {
-        transform: scale(0.5); /* Scale down to 50% */
-        padding-top: 250px; /* Move down more */
-    }
+.hero-section#hero1 {
+    background-color: white;
+    z-index: 1; /* Ensure hero1 is below hero2 */
+    flex: 1; /* Allow hero1 to take up necessary space */
+    padding: 20px; /* Add padding to avoid content being cut off */
 }
 
 model-viewer {
@@ -53,4 +42,35 @@ model-viewer {
     height: 100%;
     max-width: 600px; /* Adjust as needed */
     max-height: 600px; /* Adjust as needed */
+}
+
+/* Adjust scaling for smaller screens */
+@media (max-width: 1200px) {
+    .hero-section#hero2 {
+        transform: scale(0.9); /* Scale down to 90% */
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-section#hero2 {
+        transform: scale(0.8); /* Scale down to 80% */
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section#hero2 {
+        transform: scale(0.7); /* Scale down to 70% */
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section#hero2 {
+        transform: scale(0.6); /* Scale down to 60% */
+    }
+}
+
+@media (max-width: 400px) {
+    .hero-section#hero2 {
+        transform: scale(0.5); /* Scale down to 50% */
+    }
 }
