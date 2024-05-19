@@ -5,30 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Auspiciousblood Clone</title>
     <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="hero1.css">
-    <link rel="stylesheet" href="3D.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Global Styles -->
+    <link rel="stylesheet" href="hero1.css"> <!-- Hero 1 Styles -->
+    <link rel="stylesheet" href="3D.css"> <!-- Hero 2 Styles -->
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </head>
-<body>
-    <div class="container">
-        <div class="hero-section" id="hero2">
-            <model-viewer src="images/unenterlogom.glb" alt="3D model of an object" auto-rotate camera-controls></model-viewer>
-        </div>
-        <div class="hero-section" id="hero1">
-            <div class="content">
-                <div class="date-time">Date and Time</div>
-                <button class="button">SHOP NOW</button>
-                <button class="button">POLICIES</button>
-                <button class="button">NEWSLETTER</button>
-                <button class="button">SHOP BY COLLECTION</button>
-                <button class="button">VIP MEMBERS CLUB</button>
-                <div class="social-icons">
-                    <a href="https://instagram.com" target="_blank" rel="noopener"><img src="images/Insta.jpeg" alt="Instagram"></a>
-                    <a href="https://twitter.com" target="_blank" rel="noopener"><img src="images/X.jpeg" alt="Twitter"></a>
-                    <a href="https://youtube.com" target="_blank" rel="noopener"><img src="images/Youtube.jpeg" alt="YouTube"></a>
-                </div>
-            </div>
-        </div>
+<body style="margin: 0;">
+    <div id="hero2" class="hero2-section">
+        <!-- 3D model will be handled by 3D.js and 3D.css -->
+    </div>
+    <div id="hero1" class="hero-section" style="background-color: white;">
+        <!-- Content for hero1 will be added by hero1.js -->
     </div>
     <script src="hero1.js"></script>
     <script src="3D.js"></script>
